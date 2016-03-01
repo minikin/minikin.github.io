@@ -9,6 +9,6 @@ header-img: "img/mvvm.png"
 
 TEST POST!
 
-Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+Photographs by NASA.
 
 
