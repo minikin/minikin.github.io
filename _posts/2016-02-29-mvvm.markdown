@@ -2,7 +2,7 @@
 layout:     post
 title:      "The first try with MVVM"
 subtitle:   ""
-date:       2016-03-01 12:00:00
+date:       2016-02-29 12:00:00
 author:     "Sasha Prokhorenko"
 header-img: "img/post-bg-06.jpg"
 ---
