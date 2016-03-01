@@ -9,6 +9,6 @@ header-img: "img/mvvm.png"
 
 TEST POST!
 
-Photographs by NASA.
+Photo by NASA.
 
 
