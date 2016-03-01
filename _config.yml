@@ -1,0 +1,20 @@
+# Site settings
+title: Sasha Prokhorenko
+header-img: img/main-bg.jpg
+email: djminikin@gmail.com
+copyright_name: Sasha Prokhorenko
+description: "iOS Software Engineer & IofT adept."
+baseurl: ""
+url: "http://minikin.github.io"
+twitter_username: minikin
+github_username:  minikin
+email_username:  djminikin@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
