@@ -11,7 +11,7 @@ header-img: "img/mvvm.png"
 
 
 
-<p>My a new website is still in development but you can read <a href="{{ site.baseurl }}/about">about me</a>, check my <a href="{{ site.baseurl }}/portfolio">portfolio</a> <i>(in progress)</i> or look through my <a href="{{ site.baseurl }}/resume">resume</a>.</p>
+<p>My new website is still in development but you can read <a href="{{ site.baseurl }}/about">about me</a>, check my <a href="{{ site.baseurl }}/portfolio">portfolio</a> <i>(in progress)</i> or look through my <a href="{{ site.baseurl }}/resume">resume</a>.</p>
 
 <p>In near future, I'm going to start blogging about swift, data structure, algorithms, IoT and other software & hardware engineering related stuff.</p>
 
