@@ -28,7 +28,7 @@ To accomplish this we created a device that displays all the necessary informati
 <p><b>Technical background:</b> </p>
 
 <p>The solution for this task was quite simple.  As always, I had a very short period of time to prepare the project.
-I decided to use an inexpensive android phone as the base. Major modifications were made to the android operating system (even changing the splash screen, power-off screens, etc.). After all these tweaks, it became a device which displayed only our data. It was impossible for a user to do anything else with the device. Unfortunately, at that moment, I didn't have enough time, knowledge, and budget to develop a native android app so I decided to use a third-party application which worked almost like an internet kiosk to display data from the Internet. It was possible to configure each device for a certain client.</br>
+I decided to use an inexpensive android phone as the base. Major modifications were made to the android operating system (even changing the splash screen, power-off screens, etc.). After all these tweaks, it became a device which displayed only our data. It was impossible for a user to do anything else with the device. Unfortunately, at that moment, I didn't have enough time, knowledge, and budget to develop a native android app so I decided to use a third-party application which worked almost like an internet kiosk to display data from the Internet. It was possible to configure each device for a certain client.</br></br>
 Later we decided to develop an iOS application with this BRAHM concept but unfortunately, the project was abandoned when 1/4th completed.
 </p>
 
@@ -43,10 +43,16 @@ KIAF Silver 2014.</p>
 
 <iframe src="//player.vimeo.com/video/64876465?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<p><b>Technical background:</b>
+<p><b>Technical background:</b></p>
+<p>
+This was one of the most challenging projects.  Besides that, I have an engineering degree, at that time I’d never before  worked with tubing and CO2.</br></br>
 
-<i>Technical description will be added here soon</i>
+For the prototype, I decided to use an inexpensive Chinese “Stage CO2 Jet Machine”, the solenoid valve of which was controlled by an Arduino board and microphone sensor. From the beginning, everything just worked like a charm. Soon, I discovered that  the Chinese solenoid valve sometimes wouldn't  close. This  happened due to an inability to operate over a long period in extreme conditions, -70 C and under high pressure.</br></br>
 
+I spent a few weeks  in discussing possible solutions with different manufacturers of solenoid valves around the world. I found that only a few companies can produce this kind of robust solenoid valve which I needed. I decided to order a solenoid valve from a Japanese company. Usually, these kinds of solenoid valves are produced only by request and for nuclear power plants.</br></br>
+
+So it took almost 3 months for it to be in my hands. 
+I was so happy and ICE MACHINE then worked for 3 months without any failures. 
 
 </p>
 
@@ -63,7 +69,7 @@ We designed an innovation - the world’s first Pepsi Fridge that expresses emot
 
 <p><b>Technical background:</b></p>
 
-<p>I used  an Atmel microcontroller chip which was programmed to transform signals from a reed sensor on the door to midi data. After that, the received signal was transformed from midi data  to TCP/IP protocol inside a MAX/MSP, patch which was run on a macMini and triggered different videos from a local web server. Maybe you thought <i>"What a tricky architecture?”</i>, but I assure you, this system was very stable and didn't crash for almost one year while this fridge was operating  in a supermarket. </br>
+<p>I used  an Atmel microcontroller chip which was programmed to transform signals from a reed sensor on the door to midi data. After that, the received signal was transformed from midi data  to TCP/IP protocol inside a MAX/MSP, patch which was run on a macMini and triggered different videos from a local web server. Maybe you thought <i>"What a tricky architecture?”</i>, but I assure you, this system was very stable and didn't crash for almost one year while this fridge was operating  in a supermarket. </br></br>
 That was a very successful & cost-effective choice.
 
 </p>
@@ -75,13 +81,35 @@ That was a very successful & cost-effective choice.
 The same as in many other offices, every morning at Aimbulance starts with a cup of hot coffee. Often the check-in ritual precedes the process of drinking the first daily dose of caffeine. We decided to combine these two morning habits used in our office and transformed a common vending machine into a phygtal-coffee machine.
 </blockquote>
 <iframe src="//player.vimeo.com/video/87552239?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><b>Technical background:</b>
-
-<i>Technical description will be added here soon</i>
-
-
+<p><b>Technical background:</b></p>
+<p>
+The realisation of the idea was straightforward. I don't have any documentation for the machine firmware so I decided to control the machine functionality using "press buttons". I used an Arduino controller with a GSM/GPRS shield and a few electronic components to close and open contacts (press buttons). As a hub for the data transmission between the web app which  handled Facebook  authorisation and check-ins, and Arduino, I used pusher.com. 
 </p>
 <p><b>Rewards:</b> Ukrainian Design The Very Best Of 2014, Kakadu Silver 2014.</p>
+
+
+<h2 class="section-heading">Khortitsa Ice into the stratosphere</h2>
+<blockquote>
+The innovative bottle for «Khortytsa Ice» changes its color when cooled to +5C (the ideal temperature for beverage drinking). We decided to demonstrate the gradual change of the bottle color in an original way - to send it into the stratosphere.
+</br>
+On the «Khortytsa Ice» space program site we offered users the opportunity to determine the altitude at which the bottle reaches its ideal temperature and changes color. Predictions could be posted on the site and on the Facebook network. After the successful launch of the measuring probe to an altitude of more than 25km, we were able to fix the altitude at which the bottle changed color and then decided the winner. 
+</blockquote>
+
+<iframe src="//player.vimeo.com/video/67628795?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p><b>Technical background:</b></p>
+<p>
+It was fun. The most challenging part was a quest to find the box with electronics.
+It was almost impossible to predict the coordinates where we can find the box.
+I spent some time trying to calculate coordinates, but it was just lost time.</br></br>
+
+In the box, I put a microcontroller which recorded data from different sensors like for, height, temperature, barometric pressure, and so on,  to  an SD card and small video camera which was able to operate in extreme conditions +  a super reliable GPS device which sent coordinates once  per ten minutes via GSM.</br></br>
+
+To be honest, it took 2 attempts to succeed.
+</p>
+<p><b>Rewards:</b> White Square Silver 2014, Propeller Bronze 2013,KIAF Bronze 2013.</p>
+
+
 
 
 <h2 class="section-heading">Captain Morgan RFID</h2>
@@ -100,21 +128,7 @@ At a Captain Morgan party devoted to a Halloween feast there was launched RFID-a
 </p>
 
 
-<h2 class="section-heading">Khortitsa Ice into the stratosphere</h2>
-<blockquote>
-The innovative bottle for «Khortytsa Ice» changes its color when cooled to +5C (the ideal temperature for beverage drinking). We decided to demonstrate the gradual change of the bottle color in an original way - to send it into the stratosphere.
-</br>
-On the «Khortytsa Ice» space program site we offered users the opportunity to determine the altitude at which the bottle reaches its ideal temperature and changes color. Predictions could be posted on the site and on the Facebook network. After the successful launch of the measuring probe to an altitude of more than 25km, we were able to fix the altitude at which the bottle changed color and then decided the winner. 
-</blockquote>
 
-<iframe src="//player.vimeo.com/video/67628795?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<p><b>Technical background:</b>
-
-<i>Technical description will be added here soon</i>
-</p>
-
-<p><b>Rewards:</b> White Square Silver 2014, Propeller Bronze 2013,KIAF Bronze 2013.</p>
 
 
 
