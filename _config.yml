@@ -1,9 +1,9 @@
 # Site settings
 title: Sasha Prokhorenko
-header-img: img/main-bg.png
+header-img:
 email: djminikin@gmail.com
 copyright_name: Sasha Prokhorenko
-description: "iOS Software Engineer & IoT adept."
+description: "iOS & IoT Software Engineer"
 baseurl: ""
 url: "http://minikin.me"
 logo: "/img/main-bg.png"
