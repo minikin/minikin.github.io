@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/Minikin/.rbenv/versions/2.4.0/include/ruby-2.4.0
+topdir = /usr/local/Cellar/ruby/2.4.3_1/include/ruby-2.4.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/Minikin/.rbenv/versions/2.4.0/include/ruby-2.4.0/x86_64-darwin16
+arch_hdrdir = /usr/local/Cellar/ruby/2.4.3_1/include/ruby-2.4.0/x86_64-darwin16
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/Minikin/.rbenv/versions/2.4.0
+prefix = $(DESTDIR)/usr/local/Cellar/ruby/2.4.3_1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -30,10 +30,10 @@ sitehdrdir = $(rubyhdrdir)/site_ruby
 rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20170302-30289-1tdfixs
-sitelibdir = $(DESTDIR)./.gem.20170302-30289-1tdfixs
-sitedir = $(rubylibprefix)/site_ruby
+vendordir = $(DESTDIR)/usr/local/lib/ruby/vendor_ruby
+sitearchdir = $(DESTDIR)./.gem.20171219-2528-1a62l99
+sitelibdir = $(DESTDIR)./.gem.20171219-2528-1a62l99
+sitedir = $(DESTDIR)/usr/local/lib/ruby/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
 sitearchincludedir = $(includedir)/$(sitearch)
@@ -65,9 +65,9 @@ archdir = $(rubyarchdir)
 
 CC = clang
 CXX = clang++
-LIBRUBY = $(LIBRUBY_A)
+LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = 
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
 empty =
 OUTFLAG = -o $(empty)
@@ -81,13 +81,13 @@ optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe    $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/local/Cellar/libxslt/1.1.29/include -I/usr/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.29/include -I/usr/include/libxml2
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/usr/include/libxml2/ -I/Users/Minikin/.rbenv/versions/2.4.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) $(cxxflags)   $(ARCH_FLAG)
-ldflags  = -L. -L/Users/Minikin/.rbenv/versions/2.4.0/lib  -fstack-protector -L/usr/local/lib -L/usr/local/Cellar/libxslt/1.1.29/lib -L/usr/local/Cellar/libxml2/2.9.4/lib -L/usr/local/Cellar/libxslt/1.1.29/lib -L/usr/local/Cellar/libxml2/2.9.4/lib
-dldflags = -L/Users/Minikin/.rbenv/versions/2.4.0/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29/include -I/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/include/libxml2 -I/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/include/libxml2  -I/usr/local/opt/libyaml/include -I/usr/local/opt/openssl/include -I/usr/local/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  = -L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib
+dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
@@ -96,7 +96,7 @@ AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
-RUBY_SO_NAME = ruby
+RUBY_SO_NAME = ruby.2.4.3
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
@@ -112,8 +112,8 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir -p
-MAKEDIRS = /usr/local/bin/gmkdir -p
-INSTALL = /usr/local/bin/ginstall -c
+MAKEDIRS = mkdir -p
+INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir)
-LIBPATH =  -L. -L$(libdir)
+libpath = . $(libdir) /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/lib /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29/lib /usr/local/opt/libyaml/lib /usr/local/opt/openssl/lib /usr/local/opt/readline/lib /usr/local/Cellar/xz/5.2.3/lib
+LIBPATH =  -L. -L$(libdir) -L/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/lib -L/Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/Cellar/xz/5.2.3/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,7 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
-LIBS =   -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -lgmp -ldl -lobjc  
+LIBS = $(LIBRUBYARG_SHARED) /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29/lib/libexslt.a -lm -liconv -lpthread -llzma -lz /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/lib/libxml2.a /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxslt/1.1.29/lib/libxslt.a -lm -liconv -lpthread -llzma -lz /Developer/Minikin/minikin.github.io/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.7.0.1/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.4/lib/libxml2.a -llzma -lpthread -ldl -lobjc  
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
@@ -160,7 +160,7 @@ CLEANLIBS     = $(TARGET_SO)
 CLEANOBJS     = *.o  *.bak
 
 all:    $(DLLIB)
-static: $(STATIC_LIB) install-rb
+static: $(STATIC_LIB)
 .PHONY: all install static install-so install-rb
 .PHONY: clean clean-so clean-static clean-rb
 
@@ -623,4 +623,4 @@ xslt_stylesheet.o: xslt_stylesheet.c xslt_stylesheet.h nokogiri.h	\
 all: clean-ports
 
 clean-ports: $(DLLIB)
-	-$(Q)$(RUBY) $(srcdir)/extconf.rb --clean --disable-static
+	-$(Q)$(RUBY) $(srcdir)/extconf.rb --clean --enable-static
