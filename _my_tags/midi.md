@@ -1,4 +1,0 @@
----
-slug: midi
-name: Midi
----
