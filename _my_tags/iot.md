@@ -1,4 +1,0 @@
----
-slug: iot
-name: IoT
----
