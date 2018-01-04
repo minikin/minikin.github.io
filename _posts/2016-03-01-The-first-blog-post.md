@@ -1,10 +1,8 @@
 ---
 layout:     post
 title:      "The first blog post."
-subtitle:   ""
 date:       2016-03-01 10:00:00
 author:     "Sasha Prokhorenko"
-header-img: "img/mvvm.png"
 ---
 
 <p>Hello!</p>
