@@ -5,7 +5,6 @@ subtitle:   "Multi-Line String Literals "
 date:       2017-06-02 10:00:00
 author:     "Sasha Prokhorenko"
 header-img: "img/blog/posts_covers/post_cover2.png"
-excerpt_separator:  <!--more-->
 ---
 Only a few days left before WWDC 2017. I hope that we’ll see a lot of great and useful stuff, besides Swift 4, from Apple which can help us to make the world a better place.
 

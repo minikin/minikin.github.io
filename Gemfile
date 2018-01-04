@@ -1,13 +1,14 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-group :jekyll_plugins do
-  gem "jekyll"
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-  gem "jekyll-feed"
-  gem "jemoji"
-  gem "jekyll-seo-tag"
-  gem 'jekyll-assets'
-  gem 'bootstrap', '~> 4.0.0.alpha6'
-  gem 'font-awesome-sass', '~> 4.7'
-end
+gem "autoprefixer-rails"
+gem "html-proofer"
+gem "image_optim"
+gem "jekyll"
+gem "jekyll-assets"
+gem "jekyll-paginate"
+gem "jekyll-sitemap"
+gem "jemoji"
+gem "mini_magick"
+gem "sass"
+gem "sprockets", "4.0.0.beta6"
+gem "uglifier"
