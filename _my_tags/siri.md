@@ -1,4 +1,0 @@
----
-slug: siri
-name: Siri
----
