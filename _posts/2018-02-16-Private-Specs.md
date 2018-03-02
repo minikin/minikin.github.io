@@ -11,6 +11,13 @@ When you have frameworks which you need to share between iOS developers inside
 a company without going public you can do it with a private [CocoaPods](https://cocoapods.org){:target="_blank"} repository.
 In this blog post, I’m going to show you how to do so step by step.
 
+You should have a CocoaPods installed otherwise install it:
+
+{% highlight bash %}
+sudo gem install cocoapods
+{% endhighlight bash %}
+
+
 - Create private repository on your company's Github, Bitbucket or Gitlab:
     ![Bitbucket]({{ site.url }}/img/blog/cocoapods/cp_1.png)
 - Provide access for all your iOS team members.
@@ -18,12 +25,10 @@ In this blog post, I’m going to show you how to do so step by step.
 - Add your private specs:
 
 {% highlight bash %}
-
 pod repo add specsName https://code.company.com/podspecs.git
-
 {% endhighlight bash %}
 
-_Note_ : It will be add to the pass  ```~/.cocoapods/repos ```
+  _Note_ : It will be add to the pass  ```~/.cocoapods/repos```
 
 - When you have your pod ready, push your CocoaPod specs to remote:
 
