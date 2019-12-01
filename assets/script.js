@@ -1,17 +1,6 @@
 document.getElementsByTagName('style')[0].style.display = "none";
 document.getElementsByTagName('body')[0].style.display = "block";
 
-// var watermark = document.createElement("p");
-// var watermarklink = document.createElement("a");
-// var watermarklinkspan = document.createElement("span");
-// var watermarklinkspantext = document.createTextNode("");
-// watermarklink.setAttribute("href", "http://temper.jonaspelzer.com");
-// watermarklink.setAttribute("target", "_blank");
-// watermarklink.appendChild(watermarklinkspan);
-// watermarklinkspan.appendChild(watermarklinkspantext);
-// watermark.appendChild(watermarklink);
-// watermark.classList.add("watermark");
-// document.getElementsByClassName("text")[0].appendChild(watermark);
 var paragraphs = document.getElementsByTagName("p").length;
 
 document.getElementsByTagName('style')[0].innerHTML +=
